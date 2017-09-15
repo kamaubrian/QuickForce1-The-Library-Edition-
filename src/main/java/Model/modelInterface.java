@@ -7,7 +7,7 @@ public interface modelInterface {
 
      boolean dbConnect();
      boolean dbDisconnect();
-     public String getUsername();
-     public String getPassword();
+      String getUsername(String username);
+      String getPassword(String password);
 
 }
