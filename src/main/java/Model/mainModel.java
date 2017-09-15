@@ -8,7 +8,7 @@ import java.sql.Statement;
 /**
  * Created by Brian Kamau on 9/16/17.;
  */
-public abstract class mainModel implements modelinterface{
+public abstract class mainModel implements modelInterface {
     public static String dbUrl ="jdbc:mysql://localhost:3306/Library?useSSL=false";
     public static String dbUsername = "root";
     public static String dbPassword="root";
