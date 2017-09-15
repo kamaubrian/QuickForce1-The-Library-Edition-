@@ -14,6 +14,20 @@ public class mainModelTest {
         boolean result = instance.dbConnect();
         assertEquals(expResult,result);
     }
+
+    @Test
+    public void testDisconnect(){
+        System.out.println("Disconnecting from Database");
+        mainModel instance = new mainModelImpl();
+        boolean expResult = true;
+        boolean result = instance.dbDisconnect();
+        assertEquals(expResult,result);
+        System.out.println("Database Disconnected");
+
+
+
+
+    }
     public class mainModelImpl extends mainModel{
 
     }

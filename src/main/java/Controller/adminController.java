@@ -5,6 +5,16 @@ package Controller;
  */
 public class adminController implements admininterface {
 
+
+    public static void main(String [] args){
+
+
+
+
+
+    }
+
+
     @Override
     public boolean login(String username, String password){
 
