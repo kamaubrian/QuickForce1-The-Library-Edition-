@@ -27,7 +27,22 @@ public class adminModel extends mainModel implements modelInterface {
 
     @Override
     public String getPassword(String password){
-
+        String sql="";
+        String pass="";
+        dbConnect();
+        try{
+            sql="SELECT * FROM Credentials WHERE Password=?";
+            pst=conn.prepareStatement(sql);
+            pst.setString(1,password);
+            rst=pst.executeQuery();
+            if(rst.next()){
+                pass=rst.getString("Password");
+            }
+        }catch (Exception ex){
+            System.out.println("Getting Password Exception"+ex.getMessage());
+        }
+        dbDisconnect();
+        return pass;
 
     }
 
