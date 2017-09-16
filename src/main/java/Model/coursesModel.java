@@ -5,7 +5,7 @@ import java.util.*;
  */
 public class coursesModel extends mainModel{
 
-    public ArrayList<ArrayList<String>> getCourses(){
+    public ArrayList<String> getCourses(){
         ArrayList courses = new ArrayList();
         dbConnect();
         String sql;
