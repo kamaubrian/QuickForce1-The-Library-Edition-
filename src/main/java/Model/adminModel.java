@@ -3,8 +3,8 @@ package Model;
 /**
  * Created by root on 9/16/17.
  */
-public class adminModel extends mainModel implements modelInterface {
-    @Override
+public class adminModel extends mainModel{
+
     public String getUsername(String username){
         String sql="";
         String user="";
@@ -25,7 +25,7 @@ public class adminModel extends mainModel implements modelInterface {
         return user;
     }
 
-    @Override
+
     public String getPassword(String password){
         String sql="";
         String pass="";
@@ -45,9 +45,4 @@ public class adminModel extends mainModel implements modelInterface {
         return pass;
 
     }
-
-
-
-
-
 }

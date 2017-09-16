@@ -30,12 +30,12 @@ public class mainModelTest {
     }
     public class mainModelImpl extends mainModel{
 
-        @Override
+       // @Override
         public String getUsername(String username) {
             return null;
         }
 
-        @Override
+       // @Override
         public String getPassword(String password) {
             return null;
         }

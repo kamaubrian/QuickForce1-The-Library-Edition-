@@ -32,8 +32,6 @@ public class adminController implements admininterface {
             System.out.println("Incorrect Credentials");
             sucess=false;
         }
-
-
         return sucess;
     }
 
