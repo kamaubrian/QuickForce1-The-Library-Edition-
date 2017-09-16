@@ -54,8 +54,6 @@ public abstract class mainModel implements modelInterface {
         }catch(Exception ex){
             System.out.println("Closing Database Exception"+ex.getMessage());
         }
-
-
         return success;
     }
 

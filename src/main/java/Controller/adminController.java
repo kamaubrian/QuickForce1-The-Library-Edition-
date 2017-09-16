@@ -45,8 +45,9 @@ public class adminController implements admininterface {
                     password = console.readPassword().toString();
                 }else{
                     System.out.println("Console could not be initiated");
-                    System.exit(0);
+                   password = scan.next();
                 }
+               // if(!adminmodel.checkUserExists()==true){ Checks for Users with the same Username
                 adminmodel.addUser(username,password);
                 if(adminmodel.addUser(username,password)==true){
                     System.out.println("User "+username+"Added Successfully");
