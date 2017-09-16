@@ -45,4 +45,23 @@ public class adminModel extends mainModel{
         return pass;
 
     }
+    public boolean addUser(String username, String password){
+        boolean success = true;
+        String sql="";
+        dbConnect();
+        try{
+            sql="INSERT INTO Credentials(Username,Password) VALUES(?,?)";
+            pst=conn.prepareStatement(sql);
+            pst.setString(1,username);
+            pst.setString(2,password);
+            pst.executeUpdate();
+            success=true;
+
+        }catch (Exception ex){
+            System.out.println("Adding User Exception");
+        }
+
+        dbDisconnect();
+        return success;
+    }
 }
