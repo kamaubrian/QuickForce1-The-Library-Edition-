@@ -12,6 +12,7 @@ public class adminController implements admininterface {
     static Scanner scan = new Scanner(System.in);
     static adminModel adminmodel = new adminModel();
     static coursesController course = new coursesController();
+
     static Console console = System.console();
     static String username;
     static String password;
@@ -50,7 +51,7 @@ public class adminController implements admininterface {
                // if(!adminmodel.checkUserExists()==true){ Checks for Users with the same Username
                 adminmodel.addUser(username,password);
                 if(adminmodel.addUser(username,password)==true){
-                    System.out.println("User "+username+"Added Successfully");
+                    System.out.println("User "+username.toUpperCase()+" Added Successfully");
                     course.displaycourses();
                 }else{
                     System.out.println("Internal Error Occured, Please Try again Later");
