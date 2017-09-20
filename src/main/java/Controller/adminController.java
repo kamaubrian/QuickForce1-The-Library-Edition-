@@ -16,14 +16,17 @@ public class adminController implements admininterface {
     static Console console = System.console();
     static String username;
     static String password;
+    static welcomeMessage welcome = new welcomeMessage();
 
     public static void main(String [] args) throws IOException,LoginException{
 
         System.out.println("\t\tLibrary Management System");
+        welcome.displayMessage(); // Implemented a Kotlin Class.
         System.out.println("1.Login\n2.Sign Up");
         int input =scan.nextInt();
         switch(input){
             case 1:
+
                 System.out.println("Enter Login Details\n");
                 System.out.println("Enter Username");
                 username=scan.next();
